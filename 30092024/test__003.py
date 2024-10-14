@@ -36,3 +36,7 @@ def test_stale():
 
     except StaleElementReferenceException:
         print("Element is stale")
+        text_area = driver.find_element(By.NAME, "q")
+        text_area.send_keys("Python")
+
+        time.sleep(5)
